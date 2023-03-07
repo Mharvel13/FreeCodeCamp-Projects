@@ -1,0 +1,492 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --main-color: rgb(131, 49, 172);
+  --secondary-color: rgb(73, 83, 124);
+  --link-color: rgb(50, 38, 121);
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* NAVBAR STYLES */
+
+.navbar {
+  background: var(--link-color);
+  padding: 6px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+
+.navbar li {
+  margin-left: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-family: BEYNO;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 5px;
+}
+
+.navbar a:hover {
+  padding: 5px 20px;
+  color: rgb(15, 18, 167);
+  box-sizing: border-box;
+  color: black;
+}
+
+/* Header Styles */
+section#welcome-section {
+  background-color: var(--main-color);
+  margin-top: 64px;
+  height: 100vh;
+}
+
+.header-container {
+  max-width: 85%;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-text {
+  width: 60%;
+  margin: 0 auto;
+  padding: 5px;
+  margin: 0 30px 0 0;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.intro-text h1 {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden; /* Ensures the content is not revealed until the animation*/
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  text-align: center;
+  border-right: 5px solid white; /* The typwriter cursor */
+  white-space: nowrap;
+  animation: typing 5s steps(50), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+.header-img {
+  width: 30%;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px 2px white;
+}
+
+.header-img img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+h2 {
+  text-align: left;
+  font-size: 2rem;
+}
+
+.main-container {
+  width: 80%;
+  margin: 10px auto;
+  padding: 20px;
+}
+
+/* About Section Styles */
+.about-text {
+  border: 1px solid gold;
+  border-left: 2px solid purple;
+  border-radius: 0 25px 0 25px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.about-text p {
+  font-size: 1.5rem;
+  padding: 5px;
+  color: brown;
+}
+
+/* Project  Section Styles */
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+
+.project-card {
+  border: 2px solid black;
+  margin: 20px;
+}
+
+.project-card img {
+  width: 100%;
+}
+.project-card p {
+  font-size: 1.5rem;
+  color: var(--link-color);
+  text-align: center;
+}
+
+.project-card a {
+  text-decoration: none;
+}
+
+.project-card:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+.movie-link {
+  display: block;
+  width: 50%;
+  height: 50px;
+  margin: 25px auto;
+  padding: 10px;
+  background-color: purple;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  transition: ease-out 1.5s;
+}
+
+.movie-link:hover {
+  background-color: white;
+  color: purple;
+  border: 2px solid purple;
+}
+a {
+  text-decoration: none;
+  text-align: center;
+}
+/* Testimonail Section Styles */
+.testimonail-card {
+  border: 2px solid purple;
+  padding: 20px 0;
+  margin: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+.testimonail-msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+img.img-testimonail {
+  width: 100px;
+  height: 100px;
+  border-radius: 70%;
+  border: 2px solid var(--main-color);
+  margin-right: 10px;
+}
+.testimonail-msg p {
+  padding: 20px;
+}
+
+.testimonail-person {
+  text-align: end;
+  margin-right: 20px;
+}
+.testimonail-person h4,
+.testimonail-person p {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+hr {
+  width: 80%;
+  border-top: 2px solid var(--secondary-color);
+  border-radius: 10px;
+}
+
+/* Skill Set Circle Styles */
+
+.skill-sets-circles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.skill-sets-circles p {
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 600;
+}
+.skill-sets-circle {
+  margin: 15px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+div[role="progressbar"] {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 3rem;
+  color: var(--secondary-color);
+  --pgPercentage: var(--value);
+  animation-name: circle-animate;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-direction: forwards;
+  background: radial-gradient(
+      closest-side,
+      white 80%,
+      transparent 0 99.9%,
+      white 0
+    ),
+    conic-gradient(#369 calc(var(--pgPercentage) * 1%), #def 0);
+}
+
+div[role="progressbar"]::before {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) "%";
+}
+
+@keyframes circle-animate {
+  0%,
+  33% {
+    --pgPercentage: 0;
+  }
+  100% {
+    --pgPercentage: var(--value);
+  }
+}
+
+@property --pgPercentage {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+/* Contact Section */
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.head-text {
+  text-align: center;
+}
+
+.wrapper {
+  box-shadow: 0 0 20px 0 gray;
+}
+.wrapper > * {
+  padding: 1em;
+}
+
+.personal-info {
+  background: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.personal-info-header ul li {
+  padding: 5px 0;
+  font-size: 1.1rem;
+  margin: 0;
+  color: white;
+}
+
+.personal-info-header h3,
+.personal-info-header ul {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.links li a {
+  text-decoration: none;
+}
+
+.links li a img {
+  width: 30px;
+  border-radius: 50%;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: black;
+}
+
+/* Contact Form styles */
+.contact {
+  background: lightcyan;
+}
+
+.contact form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.contact form label {
+  display: block;
+}
+
+.contact form div {
+  margin: 0;
+}
+
+.contact form .full {
+  grid-column: 1 / 3;
+}
+
+.contact form input,
+.contact form textarea,
+.contact form button {
+  width: 100%;
+  padding: 0.8em;
+  border: 1px solid var(--main-color);
+}
+
+.contact form button {
+  background: var(--main-color);
+  border: 0;
+  text-transform: uppercase;
+}
+.contact form button:hover {
+  background-color: var(--secondary-color);
+  color: white;
+  transition: background-color 2s ease-out;
+}
+
+/* large screen */
+@media (min-width: 800px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .wrapper > * {
+    padding: 2em;
+  }
+  .personal-info h3,
+  .personal-info ul,
+  .head-text {
+    text-align: left;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar ul {
+    justify-content: center;
+    font-size: 0.9rem;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .navbar li {
+    margin-left: 5px;
+  }
+
+  .header-container {
+    max-width: 100%;
+    flex-direction: column-reverse;
+  }
+  .intro-text h1 {
+    font-size: 0.85em;
+    margin-top: 50px;
+  }
+
+  .header-img {
+    width: 40%;
+  }
+  .testimonail-msg {
+    flex-direction: column;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .project-card {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .skill-sets-circles {
+    flex-direction: column;
+  }
+
+  .contact form {
+    display: block;
+  }
+}
+@media (max-width: 400px) {
+  .link-text {
+    font-size: 0.8rem;
+  }
+  a .project-title {
+    font-size: 12px;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  background-color: purple;
+  margin: 0px;
+  padding: 10px;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  color: white;
+  align-content: center;
+}

@@ -1,0 +1,435 @@
+* {
+  box-sizing: border-box;
+}
+
+@import url("http://fonts.cdnfonts.com/css/beyno");
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER STYLES */
+
+header {
+  width: 100%;
+  background-color: black;
+  height: 100vh;
+  background-image: url(https://ichef.bbci.co.uk/news/800/cpsprodpb/8D79/production/_114171263_chadwickaaronbosemandeath.jpg.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+  background-clip: border-box;
+}
+header p {
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 86%;
+  margin: 10px;
+  font-family: "BEYNO", sans-serif;
+  font-size: 2em;
+}
+span {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* END OF HEADER STYLES */
+
+/* NAVBAR STYLES */
+.navbar {
+  background: linear-gradient(to bottom right, black, purple);
+  color: white;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 20px;
+}
+
+.navbar li {
+  margin-left: 20px;
+  padding: 5px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-family: "BEYNO", sans-serif;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 7px;
+}
+
+.navbar li:hover {
+  background-color: black;
+  box-shadow: 0 1px 1px 1px gray;
+}
+.navbar a:hover {
+  color: white;
+}
+/* END OF NAVBAR STYLES */
+
+/* general container */
+#general-container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+/* MAIN CONTAINER STYLES */
+
+.container-main {
+  background-color: white;
+  border: 2px solid rgb(172, 35, 172);
+  display: flex;
+  width: 70%;
+  justify-content: start;
+  margin: 10px auto;
+  padding: 20px;
+}
+
+/* BIOGRAPHY STYLES */
+
+.main-card {
+  flex: 1;
+  width: 30%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  margin: 10px;
+  border-radius: 25px;
+}
+.main-card-img {
+  width: 100%;
+}
+
+.main-card-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 25px;
+}
+
+.main-card-info {
+  font-size: 14px;
+  font-weight: bolder;
+  padding: 5px 15px;
+}
+.main-card-info p {
+  margin-top: 20px;
+}
+.main-card:hover {
+  box-shadow: 0 8px 16px 0 rgb(172, 35, 172);
+}
+
+.biography {
+  flex: 1;
+  width: 60%;
+  padding: 10px;
+  align-self: center;
+}
+.biography p {
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1.2em;
+  padding: 10px 20px;
+}
+
+.bio-link {
+  display: block;
+  width: 60%;
+  height: 50px;
+  margin: 25px auto;
+  padding: 10px 5px;
+  background-color: purple;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  transition: ease-in 1s;
+  cursor: pointer;
+}
+.bio-link:hover {
+  background-color: white;
+  color: purple;
+  border: 2px solid purple;
+}
+a {
+  text-decoration: none;
+  text-align: center;
+}
+
+/* TRIBUTES STYLE */
+
+.section-heading {
+  text-align: center;
+  background: linear-gradient(to bottom right, black, purple);
+  height: 30%;
+  font-family: "BEYNO", sans-serif;
+  font-size: 2rem;
+  color: white;
+  padding: 20px;
+}
+
+.container-grid {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.item {
+  border: 2px solid purple;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+.tribute-person {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.img-tribute {
+  width: 50px;
+  height: 50px;
+  border-radius: 70%;
+  border: 2px solid black;
+}
+
+.tribute-header-text {
+  margin-left: 20px;
+}
+.tribute-msg {
+  margin-top: 20px;
+  padding: 5px;
+}
+.tribute-header-text h3,
+.tribute-header-text p,
+p {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, black, purple);
+}
+
+.center-video {
+  margin: 10px;
+  padding: 10px;
+}
+
+.item:nth-of-type(2) {
+  grid-column: 2 / 4;
+}
+.item:nth-of-type(3) {
+  grid-column: 1 / 3;
+}
+
+/* Slideshow container */
+
+.slideshow-container {
+  max-width: 50%;
+  position: relative;
+  margin: auto;
+  box-sizing: border-box;
+}
+.mySlides {
+  display: none;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+}
+
+.img-slide {
+  width: 100%;
+}
+
+/* Caption text */
+.text {
+  color: purple;
+  font-size: 1.5em;
+  font-weight: bolder;
+  padding: 8px 12px;
+  position: relative;
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.movie-link {
+  display: block;
+  width: 50%;
+  height: 50px;
+  margin: 25px auto;
+  padding: 5px;
+  background-color: purple;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  transition: ease-out 1.5s;
+}
+
+.movie-link:hover {
+  background-color: white;
+  color: purple;
+  border: 2px solid purple;
+}
+.link-text {
+  font-family: "BEYNO", sans-serif;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  height: 15vh;
+  width: 100%;
+  background: linear-gradient(to bottom right, black, purple);
+  color: white;
+  margin: 0px;
+  padding: 10px;
+  align-content: center;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 800px) {
+  header {
+    overflow: hidden;
+  }
+
+  header p {
+    position: relative;
+    top: 86vh;
+    text-align: center;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+  }
+
+  span {
+    margin-top: 10px;
+    font-size: 1.3rem;
+  }
+
+  @keyframes slideLeft {
+    0% {
+      top: -70px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    80% {
+      opacity: 0.3;
+    }
+    90% {
+      opacity: 0.6;
+    }
+    100% {
+      buttom: 10px;
+      opacity: 1;
+    }
+  }
+
+  .container-main {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .main-card {
+    flex: 1;
+    width: 100%;
+    margin: auto;
+  }
+
+  .biography {
+    flex: 1;
+    width: 100%;
+    padding: 5px;
+    align-self: center;
+  }
+
+  .biography p {
+    font-size: 1.1em;
+    line-height: 1.1em;
+    padding: 5px;
+  }
+
+  .container-grid {
+    display: block;
+    margin: 10px;
+  }
+  iframe {
+    width: 400px;
+    height: 250px;
+  }
+
+  .item {
+    margin: 10px;
+  }
+  .slideshow-container {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    display: none;
+  }
+
+  iframe {
+    width: 250px;
+    height: 125px;
+  }
+
+  .link-text,
+  .bio-link {
+    font-size: 0.8rem;
+    padding: 2px;
+  }
+}

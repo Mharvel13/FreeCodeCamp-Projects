@@ -1,0 +1,193 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("https://media.istockphoto.com/photos/african-american-girl-raising-her-hands-while-sitting-on-her-desk-in-picture-id1323715308?b=1&k=20&m=1323715308&s=170667a&w=0&h=MeG-_I7iI4HsElwGrxCgMm7P4QkJsWGmwvcrOyYnGlc=");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-clip: content-box;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  background-color: cadetblue;
+  margin: 0px;
+  padding: 10px;
+  align-content: center;
+  opacity: 0.9;
+}
+header h1 {
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
+  font-size: 2.3rem;
+  font-style: italic;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+header p,
+footer p {
+  padding: 10px;
+  margin: 0 10px 0 10px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  height: 15vh;
+  width: 100%;
+  background-color: cadetblue;
+  margin: 0px;
+  padding: 10px;
+  align-content: center;
+}
+
+main {
+  max-width: 85%;
+  margin: 0 auto 0 auto;
+  padding: 15px;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+.p-white {
+  font-size: 1.125rem;
+  color: #fff;
+}
+
+.personal-info,
+.academic-info,
+.survey {
+  background-color: rgba(121, 112, 143, 0.9);
+  border: 2px solid rgb(121, 112, 143);
+  border-radius: 10px;
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px;
+}
+.survey {
+  padding-left: 50px;
+}
+
+.personal-info:hover,
+.academic-info:hover,
+.survey:hover {
+  box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
+}
+
+/* MEDIA QUERIES
+    GRID IN LARGE SCREEN DEVICES
+*/
+@media (min-width: 760px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 15px;
+  }
+
+  .survey {
+    grid-column: 1 / 3;
+  }
+}
+
+form {
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.25rem;
+}
+
+.form-group {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  color: #25486b;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #8ebdec;
+  border-radius: 0.25rem;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #ce1d99;
+  outline: 0;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-bottom: 2px solid cadetblue;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+textarea:focus {
+  background-color: cadetblue;
+  border: none;
+  border-bottom: 2px solid cadetblue;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: cadetblue;
+  color: white;
+  border-radius: 10px;
+  border: 1px solid #ec8e8e;
+  cursor: pointer;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  transition: 1s ease-in-out;
+}
+
+.submit-button:hover {
+  background-color: white;
+  color: cadetblue;
+}

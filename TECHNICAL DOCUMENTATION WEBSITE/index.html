@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <nav id="navbar">
+        <header>CSS Custom Properties</header>
+        <ul>
+            <li>
+                <a class="nav-link" href="#Introduction">Introduction</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="#Before_the_Introduction_of_CSS_Custom_Properties">Before the Introduction of CSS Custom Properties</a>
+            </li>
+    
+            <li>
+                <a class="nav-link" href="#How_To_Use_CSS_Custom_Properties">How To Use CSS Custom Properties</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="#How_var()_Works">How var() Works</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="#Building_values_with_calc()">Building values with calc()</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Working_with_custom_properties_in_JavaScript">Working with custom properties in JavaScript</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="#Advantages_of_CSS_Custom_Properties">Advantages of CSS Custom Properties</a>
+            </li>
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
+                
+        </ul>
+    </nav>
+    <main id="main-doc">
+
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>
+                    Custom properties (sometimes referred to as CSS variables or cascading variables) are entities defined by CSS authors that contain specific values to be reused throughout a document. They are set using custom property notation (e.g., <code>--main-color: black;</code>) and are accessed using the <code>var()</code> function (e.g., <code>color: var(--main-color);</code>).,
+                </p>
+
+                <p> 
+                    Complex websites have very large amounts of CSS, often with a lot of repeated values. For example, the same color might be used in hundreds of different places, requiring global search and replace if that color needs to change. Custom properties allow a value to be stored in one place, then referenced in multiple other places. An additional benefit is semantic identifiers. For example,<code> --main-text-color</code> is easier to understand than <code>#00ff00,</code> especially if this same color is also used in other contexts.
+                </p>
+                        
+                <p>Custom properties are subject to the cascade and inherit their value from their parent.</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Before_the_Introduction_of_CSS_Custom_Properties">
+            <header>Before the Introduction of CSS Custom Properties</header>
+            <article>
+                <p>
+                    When designing an application it’s a common practice to set aside a set of brand colors that will be reused to keep the look of the app consistent. Unfortunately, repeating these color values over and over again in your CSS is not only a chore, but also error prone. If, at some point, one of the colors needs to be changed, you could throw caution to the wind and “find-and-replace” all the things, but on a large enough project this could easily get dangerous.
+                </p>
+
+                <p>
+                    In recent times many developers have turned to CSS preprocessors like SASS or LESS which solve this problem through the use of preprocessor variables. While these tools have boosted developer productivity immensely, the variables that they use suffer from a major drawback, which is that they’re static and can’t be changed at runtime. Adding the ability to change variables at runtime not only opens the door to things like dynamic application theming, but also has major ramifications for responsive design and the potential to polyfill future CSS features. 
+                </p>
+            </article>
+        </section>
+
+        <section class="main-section" id="How_To_Use_CSS_Custom_Properties">
+            <header>How To Use CSS Custom Properties</header>
+            <article>
+                <p>
+                    Custom properties add two new features to our CSS toolbox:
+                    <ul>
+                        <li>The ability for an author to assign arbitrary values to a property with an author-chosen name.</li>
+                        <li>The <code>var()</code> function, which allows an author to use these values in other properties.</li>
+                    </ul>
+                    Declaring a custom property is done using a custom property name that begins with a double hyphen <code>(--)</code>, and a property value that can be any valid CSS value. Like any other property, this is written inside a ruleset, like so:
+                    <code class="block">
+                        element {
+                        --main-bg-color: brown;
+                        }
+                    </code>
+                </p>
+
+                <p> Note that the selector given to the ruleset defines the scope that the custom property can be used in. A common best practice is to define custom properties on the <code>:root</code> pseudo-class, so that it can be applied globally across your HTML document:      
+                    <code class="block">
+                        :root {
+                        --main-bg-color: brown;
+                        }
+                    </code>
+                </p>
+
+                <p>
+                    However, this doesn't always have to be the case: you maybe have a good reason for limiting the scope of your custom properties.
+                    As mentioned earlier, you use the custom property value by specifying your custom property name inside the <code>var()</code> function, in place of a regular property value:
+                    <code class="block">
+                        element {
+                        background-color: var(--main-bg-color);
+                        }
+                    </code>
+                </p>
+            </article>
+        </section>
+
+        <section class="main-section" id="How_var()_Works">
+            <header>How <code>var()</code> Works</header>
+            <article>
+                <p>
+                    CSS variables can have a global or local scope.
+                    Global variables can be accessed/used through the entire document, while local variables can be used only inside the selector where it is declared.
+                </p>       
+                <p>
+                    To create a variable with global scope, declare it inside the <code>:root</code> selector. The <code>:root</code> selector matches the document's root element.
+                    <code class="block">
+                        :root {
+                            --blue: #1e90ff;
+                            --white: #ffffff;
+                        }
+                              
+                        body { background-color: var(--blue); }
+                    </code>
+                    <code>--main-color</code>
+                    is an author defined custom property with a value of <code> #06c.</code> Note that all custom properties begin with two dashes.
+
+                    The <code>var()</code> function retrieves and replaces itself with the custom property value, resulting in <code>color: #1e90ff; </code>So long as the custom property is defined somewhere in your stylesheet it should be available to the var function.
+                </p>
+                <p>
+                    To create a variable with local scope, declare it inside the selector that is going to use it.
+                    <code class="block">
+                        .container { 
+                            --gray: #808080;
+                            background-color: var(--gray);
+                            padding: 15px;
+                        }
+                    </code>
+                </p>
+                <p>
+                    To retrieve and use the value of a custom property you'll need to use the <code>var()</code> function. The syntax for the <code>var()</code> function looks like this:
+                        
+                    <code class="block">var(&#60;custom-property-name&#62; [, &#60;declaration-value&#62; ]? )</code>
+                    Where <code> &#60;custom-property-name&#62;</code> is the name of an author defined custom property, like <code> --foo,</code> and <code> &#60;declaration-value &#62;</code> is a fallback value to be used when the referenced custom property is invalid. Fallback values can be a comma separated list, which will be combined into a single value. For example <code> var(--font-stack, "Roboto", "Helvetica"); </code> defines a fallback of "Roboto", "Helvetica". Keep in mind that shorthand values, like those used for margin and padding, are not comma separated, so an appropriate fallback for padding would look like this.
+                        <code class="block">
+                            p {
+                                padding: var(--pad, 10px 15px 20px);
+                            }
+                        </code>
+                </p>
+                <p>
+                    Using these fallback values, a component author can write defensive styles for their element:
+                    <code class="block">
+                        /* In the component’s style: */
+                        .component .header {
+                            color: var(--header-color, blue);
+                        }
+                        .component .text {
+                            color: var(--text-color, black);
+                        }
+                        /* In the larger application’s style: */
+                        .component {
+                            --text-color: #080;
+                            /* header-color isn’t set,
+                                and so remains blue,
+                                the fallback value */
+                        }
+                    </code>
+                    This technique is especially useful for theming Web Components that use Shadow DOM, as custom properties can traverse shadow boundaries.
+                    When using var() there are a few gotchas to watch out for. Variables cannot be property names. For instance:
+                    
+                    <code class="block"> 
+                        .foo {
+                        --side: margin-top;
+                        var(--side): 20px;
+                    }
+                    </code>
+                </p>
+                <p>
+                    However this is not equivalent to setting <code> margin-top: 20px;</code>. Instead, the second declaration is invalid and is thrown out as an error.
+                    
+                    Similarly, you can’t (naively) build up a value where part of it is provided by a variable:
+                    <code class="block">
+                    .foo {
+                        --gap: 20;
+                        margin-top: var(--gap)px;
+                    }
+                    </code>
+                    Again, this is not equivalent to setting <code> margin-top: 20px;</code>. To build up a value, you need something else: the <code> calc()</code> function.
+                </p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Building_values_with_calc()">
+            <header>Building values with <code> calc()</code></header>
+            <article>
+                <p>
+                    If you’ve never worked with it before, the <code> calc()</code> function is a handly little tool that lets you perform calculations to determine CSS values. It’s supported on all modern browsers, and can be combined with custom properties to build up new values. For example:
+                
+                    <code class="block">
+                    .foo {
+                        --gap: 20;
+                        margin-top: calc(var(--gap) * 1px);
+                    }
+                    </code>
+
+                </p>
+         
+            </article>
+        </section>
+
+        
+        <section class="main-section" id="Working_with_custom_properties_in_JavaScript">
+            <header> Working with custom properties in JavaScript</header>
+            <article>
+            <p>
+                To get the value of a custom property at runtime, use the <code>getPropertyValue()</code> method of the computed CSSStyleDeclaration object.
+                <code class="block">
+                    /* CSS */
+                        
+                    :root {
+                        --primary-color: red;
+                        }
+
+                    p {
+                        color: var(--primary-color);
+                    }
+                </code>
+                <code class="block">   
+                    &#60;!-- HTML --&#62;
+                    &#60;p&#62;I’m a red paragraph!&#60;/p&#62;
+                </code>
+                <code class="block">
+                    /* JS */
+                   var styles = getComputedStyle(document.documentElement);
+                    var value = String(styles.getPropertyValue('--primary-color')).trim();
+                    // value = 'red'
+                </code>
+
+            </p>
+            <p>
+            Similarly, to set the value of custom property at runtime, use the <code>setProperty()</code> method of the CSSStyleDeclaration object.
+
+                <code class="block">
+                    /* CSS */ 
+                    :root { 
+                        --primary-color: red; 
+                    } 
+
+                    p {
+                        color: var(--primary-color);
+                    }
+                </code>
+                <code class="block">
+                    &#60;!-- HTML --&#62;
+                    &#60;p&#62;Now I’m a green paragraph!&#60;/p&#62;
+                </code>
+                <code class="block">
+                    /* JS */
+                    document.documentElement.style.setProperty('--primary-color', 'green');
+                </code>
+            </p>
+
+            <p>
+            You can also set the value of the custom property to refer to another custom property at runtime by using the  <code> var()</code> function in your call to <code>setProperty()</code>.
+            
+                <code class="block">
+                    
+                    /* CSS */
+                    :root {
+                        --primary-color: red;
+                        --secondary-color: blue;
+                    }
+                </code>
+                <code class="block">
+                    &#60;!-- HTML --&#62;
+                    &#60;p&#62;Sweet! I’m a blue paragraph!&#60;/p&#62;
+                </code>
+                <code class="block">
+                    /* JS */
+                document.documentElement.style.setProperty('--primary-color', 'var(--secondary-color)');
+            </code>
+                    
+                    
+
+            Because custom properties can refer to other custom properties in your stylesheets, you could imagine how this could lead to all sorts of interesting runtime effects.
+            </p>
+
+        </article>
+    </section>
+
+        <section class="main-section" id="Advantages_of_CSS_Custom_Properties">
+                <header>Advantages of CSS Custom Properties</header>
+                <article>
+                    <p>
+                        Advantages of using <code>var()</code> include the following:
+                        <ul>
+                            <li> It makes the code easier to read (more understandable)</li>
+                            <li>It makes it much easier to change the color values and color theme for a whole website by just changing the var()value.</li>
+                            <li>The use of Pre-Processers like Sass is reduced</li>
+                        </ul>
+                                
+                    </p>
+                </article>
+        </section>
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <article>
+                <h3>  All the documentation in this page is taken from the following sites</h3>
+                <ul>
+                    <li>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties"
+                    target="_blank">
+                        MDN
+                    </a>
+
+                    </li>
+                    <li>
+                    <a
+                    href="https://developer.chrome.com/blog/css-variables-why-should-you-care/"target="_blank"> Chrome Developers
+                    </a>
+                    </li>
+
+                    <li>
+                        <a
+                        href="https://www.w3schools.com/css/css3_variables.asp"
+                        target="_blank">
+                        W3schools
+                        </a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Survey Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="title">ONLINE LEARNING SURVEY</h1>
+      <p id="description">
+        Online learning is education that takes place over the Internet. It is
+        often referred to as “e- learning” among other terms. However, online
+        learning is just one type of “distance learning” - the umbrella term for
+        any learning that takes place across distance and not in a traditional
+        classroom.
+      </p>
+      <p>
+        The follwing Survey is to measure how popular Online learning has become
+        among student and youths and its advantages and disadvantages.
+      </p>
+    </header>
+
+    <main>
+      <form id="survey-form">
+        <div class="grid-container">
+          <div class="personal-info">
+            <h3>Personal Info</h3>
+            <div class="form-group">
+              <label for="name" id="name-label">Name:</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-control"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email" id="email-label">Email:</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-control"
+                placeholder="Enter your Email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="number" id="number-label">Age</label>
+              <input
+                type="number"
+                name="age"
+                id="number"
+                min="10"
+                max="99"
+                placeholder="Enter your Age"
+                class="form-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <p class="p-white">Gender</p>
+              <label>
+                <input
+                  name="user-gender"
+                  value="male"
+                  type="radio"
+                  class="input-radio"
+                  checked
+                />
+                Male
+              </label>
+
+              <label>
+                <input
+                  name="user-gender"
+                  value="female"
+                  type="radio"
+                  class="input-radio"
+                />
+                Female
+              </label>
+
+              <label>
+                <input
+                  name="user-gender"
+                  value="not-sure"
+                  type="radio"
+                  class="input-radio"
+                />
+                Other
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label for="nationality">Nationality:</label>
+              <input
+                type="text"
+                name="nationality"
+                id="nationality"
+                class="form-control"
+                placeholder="Enter your Country"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="user-state">State:</label>
+              <input
+                list="state"
+                name="state"
+                id="dropdown"
+                class="form-control"
+                placeholder="Enter your State"
+                required
+              />
+              <datalist id="state">
+                <option value="Abia" id="dropdown"></option>
+                <option value=" Adamawa"></option>
+                <option value="  Akwa Ibom"></option>
+                <option value="  Anambra"></option>
+                <option value=" Bauchi"></option>
+                <option value=" Bayelsa"></option>
+                <option value=" Benue"></option>
+                <option value="  Borno"></option>
+                <option value=" Cross River"></option>
+                <option value="  Delta"></option>
+                <option value=" Ebonyi"></option>
+                <option value="  Edo"></option>
+                <option value="  Ekiti"></option>
+                <option value=" Enugu"></option>
+                <option value="Gombe"></option>
+                <option value=" Imo"></option>
+                <option value="Jigawa"></option>
+                <option value=" Kaduna"></option>
+                <option value="  Kano"></option>
+                <option value=" Katsina"></option>
+                <option value=" Kebbi"></option>
+                <option value=" Kogi"></option>
+                <option value="Kwara"></option>
+                <option value="Lagos"></option>
+                <option value=" Nasarawa"></option>
+                <option value="Niger"></option>
+                <option value=" Ogun"></option>
+                <option value=" Ondo"></option>
+                <option value=" Osun"></option>
+                <option value=" Oyo"></option>
+                <option value=" Plateau"></option>
+                <option value=" Rivers"></option>
+                <option value="  Sokoto"></option>
+                <option value="  Taraba"></option>
+                <option value="  Yobe"></option>
+                <option value="  Zamfara"></option>
+              </datalist>
+            </div>
+          </div>
+
+          <div class="academic-info">
+            <h3>Academic Info</h3>
+            <div class="form-group">
+              <label for="user-school">School:</label>
+              <input
+                list="school"
+                name="school"
+                id="user-school"
+                class="form-control"
+                placeholder="Enter your School"
+                required
+              />
+              <datalist id="school">
+                <option value="UNN"></option>
+                <option value="UNIPORT"></option>
+                <option value="UNIUYO"></option>
+                <option value="OOU"></option>
+                <option value="COOU"></option>
+              </datalist>
+            </div>
+
+            <div class="form-group">
+              <label for="course">Course:</label>
+              <input
+                type="text"
+                name="course"
+                id="course"
+                class="form-control"
+                placeholder="Enter your Course"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="user-level">Level:</label>
+              <select name="level" id="dropdown" class="form-control">
+                <option value="100" id="dropdown">100</option>
+                <option value="200">200</option>
+                <option value="300">300</option>
+                <option value="400">400</option>
+                <option value="500">500</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="cgpa">CGPA:</label>
+              <input
+                type="number"
+                name="cgpa"
+                min="1.0"
+                max="5.0"
+                class="form-control"
+                placeholder="Enter your CGPA"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="leadership">Leadership Position:</label>
+              <input
+                type="text"
+                name="leadership"
+                id="leadership"
+                class="form-control"
+                placeholder="Enter any current leadership Position"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="survey">
+            <h3>Survey Questions</h3>
+
+            <div class="form-group">
+              <p class="p-white">Have you ever heard of E-learning?</p>
+              <label>
+                <input
+                  name="user-heard"
+                  value="Yes"
+                  type="radio"
+                  class="input-radio"
+                  checked
+                />
+                Yes
+              </label>
+
+              <label>
+                <input
+                  name="user-heard"
+                  value="No"
+                  type="radio"
+                  class="input-radio"
+                />
+                No
+              </label>
+            </div>
+            <div class="form-group">
+              <p class="p-white">Have you ever made use of E-learning?</p>
+              <label>
+                <input
+                  name="user-used"
+                  value="Yes"
+                  type="radio"
+                  class="input-radio"
+                  checked
+                />
+                Yes
+              </label>
+
+              <label>
+                <input
+                  name="user-used"
+                  value="No"
+                  type="radio"
+                  class="input-radio"
+                />
+                No
+              </label>
+            </div>
+
+            <div class="form-group">
+              <p class="p-white">
+                Which of these E-learning Platforms have you used before?
+              </p>
+
+              <label>
+                <input
+                  type="checkbox"
+                  name="Platform"
+                  value="coursera"
+                  id="coursera"
+                  class="input-checkbox"
+                />
+                Coursera
+              </label>
+
+              <label>
+                <input
+                  type="checkbox"
+                  name="Platform"
+                  value="alison"
+                  id="Alison"
+                  class="input-checkbox"
+                />
+                Alison
+              </label>
+
+              <label>
+                <input
+                  type="checkbox"
+                  name="Platform"
+                  value="udemy"
+                  id="Udemy"
+                  class="input-checkbox"
+                />
+                Udemy
+              </label>
+
+              <label>
+                <input
+                  type="checkbox"
+                  name="Platform"
+                  value="edx"
+                  id="Edx"
+                  class="input-checkbox"
+                />
+                Edx
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Platform"
+                  value="Skillshare"
+                  id="Skillshare"
+                  class="input-checkbox"
+                />
+                Skillshare
+              </label>
+
+              <label>
+                <input
+                  type="checkbox"
+                  name="Platform"
+                  value="Udacity"
+                  id="Udacity"
+                  class="input-checkbox"
+                />
+                Udacity
+              </label>
+
+              <label>
+                <input
+                  type="checkbox"
+                  name="Platform"
+                  value="LinkedIn Learning"
+                  id="LinkedIn Learning"
+                  class="input-checkbox"
+                />
+                LinkedIn Learning
+              </label>
+
+              <label>
+                <input
+                  type="checkbox"
+                  name="Platform"
+                  value="Futurelearn"
+                  id="Futurelearn"
+                  class="input-checkbox"
+                />
+                Futurelearn
+              </label>
+
+              <label>
+                <input
+                  type="checkbox"
+                  name="Platform"
+                  value="Mindvalley"
+                  id="Mindvalley"
+                  class="input-checkbox"
+                />
+                Mindvalley
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Platform"
+                  value="Others"
+                  id="Others"
+                  class="input-checkbox"
+                />
+                Others
+              </label>
+            </div>
+
+            <div class="form-group">
+              <p class="p-white">
+                What are the Advantages of E-learning to you?
+              </p>
+              <textarea
+                name="advantages"
+                id=""
+                cols="30"
+                rows="5"
+                class="form-control"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <p class="p-white">
+                What are the Disdvantages of E-learning to you?
+              </p>
+              <textarea
+                name="disadvantages"
+                id=""
+                cols="30"
+                rows="5"
+                class="form-control"
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <p class="p-white">Would you recomend E-learning?</p>
+              <label>
+                <input
+                  name="user-recommend"
+                  value="Yes"
+                  type="radio"
+                  class="input-radio"
+                  checked
+                />
+                Yes
+              </label>
+
+              <label>
+                <input
+                  name="user-recommend"
+                  value="No"
+                  type="radio"
+                  class="input-radio"
+                />
+                No
+              </label>
+            </div>
+
+            <div class="form-group">
+              <p class="p-white">
+                Who do you think E-learning is most suitable for?
+              </p>
+              <input
+                list="suitable"
+                name="level"
+                id="user-thoughts"
+                placeholder="Enter an age Group"
+                class="form-control"
+              />
+              <datalist id="suitable">
+                <option value="Children"></option>
+                <option value="Teenagers"></option>
+                <option value="Youth"></option>
+                <option value="Middle-aged"></option>
+                <option value="Old"></option>
+              </datalist>
+            </div>
+
+            <div class="form-group">
+              <p class="p-white">Any other comment or contribution?</p>
+              <textarea
+                name="comments"
+                id=""
+                cols="30"
+                rows="5"
+                class="form-control"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <p>FreeCodeCamp Certification Requirment</p>
+      <p>&copy; Copyright Marvel 2022</p>
+    </footer>
+  </body>
+</html>
