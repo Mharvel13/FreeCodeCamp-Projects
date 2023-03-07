@@ -12,13 +12,14 @@
 
 I completed the Responsive Web Design Certification Course by FreeCodeCamp and below is my the links to the projects, their repository and the live hosted sites
 
-| S/N | Project Name | Project Repo | Live Site/Demo |
-|:--:|:------------:| :------------- :| :--------------:|
-| 01 | Landing Page Website | [Landing Page Repository]() |[Live Site]()|
+|S/N   | Project Name  |   Project Repo |  Live Site/Demo |
+|:------:|:---------------|:----------------|:-----------------:|
+| 01 | Landing Page Website  |  [Landing Page Repository]()   | [Live Site]()  |
 | 02 | Survey Website |  [Survey website Repository]()  | [Live Site]() |
-| 04 | Tribute Website | [ Tribute website Repository]()  |[Live Site]() |
-| 03 | Technical Documentation Website | [Technical Documentation website Repository]() |[Live Site]() |
+| 03 | Tribute Website | [ Tribute website Repository]()  |[Live Site]() |
+| 04 |Technical Documentation Website | [Technical Documentation website Repository]() |[Live Site]() |
 | 05 | Personal Portfolio Website |[Personal Portfolio website Repository]() | [Live Site]()|
+
 
 ## About FreeCodeCamp
 
