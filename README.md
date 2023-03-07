@@ -23,7 +23,7 @@ I completed the Responsive Web Design Certification Course by FreeCodeCamp and b
 
 ## About FreeCodeCamp
 
-[Freecodecamp]() is an online platform that teaches people to code with free online courses, programming projects, and interview preparation for developer jobs. You'll learn to code by completing coding challenges and building projects. You'll also earn verified certifications along the way
+[Freecodecamp](https://www.freecodecamp.org/) is an online platform that teaches people to code with free online courses, programming projects, and interview preparation for developer jobs. You'll learn to code by completing coding challenges and building projects. You'll also earn verified certifications along the way
 
 ## Responsive Web Design Certificaton 
 FCC offers a Responsive web design certification course that aims to train on the basics of frontend development using basic frontend technologies like HTML, CSS, JS, etc
