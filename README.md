@@ -14,11 +14,11 @@ I completed the Responsive Web Design Certification Course by FreeCodeCamp and b
 
 |S/N   | Project Name  |   Project Repo |  Live Site/Demo |
 |:------:|:---------------|:----------------|:-----------------:|
-| 01 | Landing Page Website  |  [Landing Page Repository]()   | [Live Site]()  |
-| 02 | Survey Website |  [Survey website Repository]()  | [Live Site]() |
-| 03 | Tribute Website | [ Tribute website Repository]()  |[Live Site]() |
-| 04 |Technical Documentation Website | [Technical Documentation website Repository]() |[Live Site]() |
-| 05 | Personal Portfolio Website |[Personal Portfolio website Repository]() | [Live Site]()|
+| 01 | Landing Page Website  |  [Landing Page Repository](https://github.com/Mharvel13/FreeCodeCamp-Projects/tree/master/LANDING-PAGE-WEBSITE)   | [Live Site](https://codepen.io/Marvel-O/full/gOoELbY)  |
+| 02 | Survey Website |  [Survey website Repository](https://github.com/Mharvel13/FreeCodeCamp-Projects/tree/master/SURVEY-WEBSITE)  | [Live Site](https://codepen.io/Marvel-O/full/popqpZw) |
+| 03 | Tribute Website | [ Tribute website Repository](https://github.com/Mharvel13/FreeCodeCamp-Projects/tree/master/TRIBUTE-WEBSITE)  |[Live Site](https://codepen.io/Marvel-O/live/XWVOLgr) |
+| 04 |Technical Documentation Website | [Technical Documentation website Repository](https://github.com/Mharvel13/FreeCodeCamp-Projects/tree/master/TECHNICAL-DOCUMENTATION-WEBSITE) |[Live Site](https://codepen.io/Marvel-O/live/xxpmPwV) |
+| 05 | Personal Portfolio Website |[Personal Portfolio website Repository](https://github.com/Mharvel13/FreeCodeCamp-Projects/tree/master/PERSONAL-PORTFOLIO-WEBSITE) | [Live Site](https://codepen.io/Marvel-O/full/NWXJZWv)|
 
 
 ## About FreeCodeCamp
